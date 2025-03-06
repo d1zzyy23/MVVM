@@ -1,0 +1,214 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Background="#333333">
+            <!-- Add Controls for Previewer Here -->
+            <Grid ColumnDefinitions="Auto,10,Auto,10,Auto,10,Auto">
+            <StackPanel Spacing="10" Grid.Column="0">
+                <Button Content="Hello" Classes="MenuOutline"></Button>
+                <Button Content="Hello" Classes="Menu"></Button>
+                <Button Content="Hello" Classes="Outline"></Button>
+                <Button Content="Hello" Classes="Transparent"></Button>
+                
+            </StackPanel>
+                <StackPanel Spacing="10" Grid.Column="2">
+                    <Button Classes="MenuOutline">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Classes="Menu">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Classes="Outline">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Classes="Transparent">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <StackPanel Spacing="10" Grid.Column="4">
+                    <Button Classes="MenuOutline">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <Button Classes="Menu">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <Button Classes="Outline">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <Button Classes="Transparent">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    
+    <!-- Menu Button -->
+    <Style Selector="Button.Menu">
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Border Background="{DynamicResource ButtonGradient}"
+                                CornerRadius="{TemplateBinding CornerRadius}">
+                        </Border>
+                        <ContentPresenter
+                        Foreground ="{DynamicResource PrimaryForeground}"
+                        FontSize ="{TemplateBinding FontSize}"
+                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Padding="{TemplateBinding Padding}"
+                        Content="{TemplateBinding Content}"/>
+                        <Border Classes="Highlighter"></Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+        
+    <Style Selector="Button.Menu:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    
+    <!-- MenuOutline Button -->
+    <Style Selector="Button.MenuOutline">
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Border
+                            Background="{DynamicResource ButtonGradient}"
+                            BorderBrush="{DynamicResource PrimaryAccent}"
+                            BorderThickness="1"
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        </Border>
+                        <ContentPresenter
+                            Foreground ="{DynamicResource PrimaryForeground}"
+                            FontSize ="{TemplateBinding FontSize}"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Padding="{TemplateBinding Padding}"
+                            Content="{TemplateBinding Content}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+        
+    <Style Selector="Button.MenuOutline:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    
+    <Style Selector="Button.MenuOutline:pointerover /template/ Border">
+        <Setter Property="Background" Value="{DynamicResource PrimaryAccentColor}"></Setter>
+    </Style>
+    
+    <!-- Outline Button -->
+    <Style Selector="Button.Outline">
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Border Background="{DynamicResource PrimaryBackgroundGradient}"
+                                BorderBrush="{DynamicResource PrimaryAccentColor}"
+                                BorderThickness="1"
+                                CornerRadius="{TemplateBinding CornerRadius}">
+                        </Border>
+                        <ContentPresenter
+                            Foreground ="{DynamicResource PrimaryForeground}"
+                            FontSize ="{TemplateBinding FontSize}"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Padding="{TemplateBinding Padding}"
+                            Content="{TemplateBinding Content}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.Outline:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    
+    <Style Selector="Button.Outline:pointerover /template/ Border">
+        <Setter Property="Background" Value="{DynamicResource PrimaryAccentColor}"></Setter>
+    </Style>
+    
+    <!-- Transparent Button -->
+    <Style Selector="Button.Transparent">
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="3"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Border Background="Transparent" CornerRadius="3">
+                            <ContentPresenter
+                                Foreground ="{DynamicResource PrimaryForeground}"
+                                FontSize ="{TemplateBinding FontSize}"
+                                HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Padding="{TemplateBinding Padding}"
+                                Content="{TemplateBinding Content}"/>
+                        </Border>
+                        <Border Classes="Highlighter"></Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.Transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    
+</Styles>

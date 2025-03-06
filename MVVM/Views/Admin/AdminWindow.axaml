@@ -1,0 +1,73 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:admin="clr-namespace:MVVM.ViewModels.Admin"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MVVM.Views.Admin.AdminWindow"
+        x:DataType="admin:AdminWindowViewModel"
+        Title="AdminWindow">
+        
+        <Design.DataContext>
+                <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+                <admin:AdminWindowViewModel/>
+        </Design.DataContext>
+        
+        <SplitView
+                DisplayMode="CompactInline"
+                IsPaneOpen="{Binding IsPaneOpen}"
+                OpenPaneLength="200"
+                CompactPaneLength="48"
+                Background="{DynamicResource PrimaryBackgroundGradient}"
+                PaneBackground="{DynamicResource PrimaryBackgroundGradient}">
+                <SplitView.Pane>
+                        <Border Padding="10 10 10 10">
+                                <Grid RowDefinitions="Auto,10,Auto,*,Auto">
+                                                <Button Classes="Transparent" Command="{Binding TogglePaneCommand}" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="4 0 4 0">
+                                                        <StackPanel Classes="IconButton">
+                                                                <PathIcon Data="{StaticResource LineHorizontal3Regular}" Width="8"></PathIcon>
+                                                        </StackPanel>
+                                                </Button>
+                                        <StackPanel Grid.Row="2" Spacing="20">
+                                                <Button Classes="Menu" Command="{Binding ChangeViewModelCommand}" CommandParameter="Dashboard" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                                        <StackPanel Classes="IconButton">
+                                                                <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                                                                <Label Content="Dashboard"></Label>
+                                                        </StackPanel>
+                                                </Button>
+                                                <Button Classes="MenuOutline" Command="{Binding ChangeViewModelCommand}" CommandParameter="PIM" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                                        <StackPanel Classes="IconButton">
+                                                                <PathIcon Data="{StaticResource AttachRegular}" ></PathIcon>
+                                                                <Label Content="PIM"></Label>
+                                                        </StackPanel>
+                                                </Button>
+                                                <Button Classes="Outline" Command="{Binding ChangeViewModelCommand}" CommandParameter="OMS" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                                        <StackPanel Classes="IconButton">
+                                                                <PathIcon Data="{StaticResource TicketDiagonalRegular}"></PathIcon>
+                                                                <Label Content="OMS"></Label>
+                                                        </StackPanel>
+                                                </Button>
+                                                <Button Classes="Transparent" Command="{Binding ChangeViewModelCommand}" CommandParameter="DAM" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                                        <StackPanel Classes="IconButton">
+                                                                <PathIcon Data="{StaticResource DataLineRegular}"></PathIcon>
+                                                                <Label Content="DAM"></Label>
+                                                        </StackPanel>
+                                                </Button>
+                                        </StackPanel>
+                                        <ToggleButton Grid.Row="4" Classes="Theme" IsChecked="True" Padding="2" HorizontalAlignment="Left">
+                                                <Panel>
+                                                        <PathIcon Classes="Dark" Data="{StaticResource WeatherMoonRegular}"></PathIcon>
+                                                        <PathIcon Classes="Light" Data="{StaticResource WeatherSunnyRegular}"></PathIcon>
+                                                </Panel>
+                                        </ToggleButton>
+                                        
+                                </Grid>
+                        </Border>
+                </SplitView.Pane>
+                <SplitView.Content>
+                        <ContentControl Content="{Binding CurrentViewModel}"></ContentControl>
+                </SplitView.Content>
+        </SplitView>
+                
+</Window>

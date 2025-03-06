@@ -1,0 +1,35 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="#333333">
+            <!-- Add Controls for Previewer Here -->
+            <Grid ColumnDefinitions="Auto,50,Auto">
+                <StackPanel Spacing="10">
+                    <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    <PathIcon Data="{StaticResource AttachRegular}"></PathIcon>
+                    <PathIcon Data="{StaticResource DataLineRegular}"></PathIcon>
+                    <PathIcon Data="{StaticResource LineHorizontal3Regular}"></PathIcon>
+                    <PathIcon Data="{StaticResource WeatherSunnyRegular}"></PathIcon>
+                    <PathIcon Data="{StaticResource WeatherMoonRegular}"></PathIcon>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Spacing="10">
+                    <PathIcon Classes="Dark" Data="{StaticResource HomeRegular}"></PathIcon>
+                    <PathIcon Classes="Dark" Data="{StaticResource AttachRegular}"></PathIcon>
+                    <PathIcon Classes="Dark" Data="{StaticResource DataLineRegular}"></PathIcon>
+                    <PathIcon Classes="Dark" Data="{StaticResource LineHorizontal3Regular}"></PathIcon>
+                    <PathIcon Classes="Dark" Data="{StaticResource WeatherSunnyRegular}"></PathIcon>
+                    <PathIcon Classes="Dark" Data="{StaticResource WeatherMoonRegular}"></PathIcon>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <Style Selector="PathIcon">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+    </Style>
+    
+    <Style Selector="PathIcon.Dark">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
+    </Style>
+</Styles>

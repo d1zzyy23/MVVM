@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:shop="clr-namespace:MVVM.ViewModels.SHOP"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MVVM.Views.SHOP.MainWindow"
+        x:DataType="shop:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="MVVM">
+
+    <Grid RowDefinitions="Auto,*">
+        <Border Background="Gray">
+            <Grid ColumnDefinitions="Auto,50,Auto,*,Auto">
+                <Label FontSize="35" HorizontalAlignment="Center" Foreground="White"> Shop </Label>
+                <StackPanel Grid.Column="2" Spacing="5" Orientation="Horizontal" Margin="5">
+                    <Button  Content="Computers" FontSize="12" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch"></Button>
+                    <Button  Content="Parts" FontSize="12" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch"></Button>
+                </StackPanel>
+                <StackPanel Grid.Column="4" Orientation="Horizontal" Spacing="1">
+                    <Button Content="Admin" Command="{Binding OpenAdminCommand}" Foreground="White" FontSize="12" Padding="2"></Button>
+                </StackPanel>
+                                        
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

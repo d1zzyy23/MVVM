@@ -1,0 +1,56 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="#333333">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ToggleButton Classes="Theme" IsChecked="True" Padding="2" HorizontalAlignment="Center">
+                    <Panel>
+                        <PathIcon Name="On" Data="{StaticResource WeatherMoonRegular}"></PathIcon>
+                        <PathIcon Name="Off" Data="{StaticResource WeatherSunnyRegular}"></PathIcon>
+                    </Panel>
+                </ToggleButton>
+                <TextBlock Foreground="{DynamicResource PrimaryForeground}" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center">Theme</TextBlock>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    
+    <Style Selector="ToggleButton.Theme:checked">
+        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="Transparent" />
+        </Style>
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundPointerOver}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundPointerOver}"></Setter>
+        </Style>
+    </Style>
+    
+    <Style Selector="ToggleButton.Theme:unchecked">
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundPointerOver}"></Setter>
+        </Style>
+        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="Transparent" />
+        </Style>
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundPointerOver}" />
+        </Style>
+    </Style>
+    
+    <Style Selector="ToggleButton.Theme PathIcon#On">
+        <Setter Property="IsVisible" Value="False"/>
+    </Style>
+    <Style Selector="ToggleButton.Theme:checked PathIcon#On">
+        <Setter Property="IsVisible" Value="True"/>
+    </Style>
+    <Style Selector="ToggleButton.Theme PathIcon#Off">
+        <Setter Property="IsVisible" Value="True"/>
+    </Style>
+    <Style Selector="ToggleButton.Theme:checked PathIcon#Off">
+        <Setter Property="IsVisible" Value="False"/>
+    </Style>
+</Styles>

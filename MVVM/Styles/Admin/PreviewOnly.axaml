@@ -1,0 +1,68 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Background="#333333">
+            <!-- Add Controls for Previewer Here -->
+            <Grid ColumnDefinitions="Auto,10,Auto,10,Auto,10,Auto">
+            <StackPanel Spacing="10" Grid.Column="0">
+                <Button Content="Hello" Classes="MenuOutline"></Button>
+                <Button Content="Hello" Classes="Menu"></Button>
+                <Button Content="Hello" Classes="Outline"></Button>
+                <Button Content="Hello" Classes="Transparent"></Button>
+                
+            </StackPanel>
+                <StackPanel Spacing="10" Grid.Column="2">
+                    <Button Classes="MenuOutline">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Classes="Menu">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Classes="Outline">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Classes="Transparent">
+                        <StackPanel Classes="IconButton">
+                            <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <StackPanel Spacing="10" Grid.Column="4">
+                    <Button Classes="MenuOutline">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <Button Classes="Menu">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <Button Classes="Outline">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <Button Classes="Transparent">
+                        <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                    </Button>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ToggleButton Classes="Theme" IsChecked="True" Padding="2" HorizontalAlignment="Center">
+                                <Panel>
+                                    <PathIcon Name="On" Data="{StaticResource WeatherMoonRegular}"></PathIcon>
+                                    <PathIcon Name="Off" Data="{StaticResource WeatherSunnyRegular}"></PathIcon>
+                                </Panel>
+                        </ToggleButton>
+                        <TextBlock Foreground="{DynamicResource PrimaryForeground}" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center">Theme</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+</Styles>
