@@ -65,3 +65,4 @@ C:\Users\dlykk\Documents\test projects\MVVM\MVVM\obj\Debug\net9.0\refint\Avaloni
 C:\Users\dlykk\Documents\test projects\MVVM\MVVM\obj\Debug\net9.0\MVVM.csproj.Up2Date
 C:\Users\dlykk\Documents\test projects\MVVM\MVVM\obj\Debug\net9.0\MVVM.genruntimeconfig.cache
 C:\Users\dlykk\Documents\test projects\MVVM\MVVM\obj\Debug\net9.0\ref\MVVM.dll
+C:\Users\dlykk\Documents\test projects\MVVM\MVVM\obj\Debug\net9.0\MVVM.sourcelink.json

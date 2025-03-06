@@ -12,7 +12,7 @@ namespace MVVM.ViewModels.Admin;
 public partial class AdminWindowViewModel : ViewModelBase
 {
     [ObservableProperty]
-    private bool _isPaneOpen = true;
+    private bool _isPaneOpen;
 
     [ObservableProperty] 
     private ViewModelBase _currentViewModel;

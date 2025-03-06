@@ -210,5 +210,5 @@
     <Style Selector="Button.Transparent:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="White"></Setter>
     </Style>
-    
+
 </Styles>
