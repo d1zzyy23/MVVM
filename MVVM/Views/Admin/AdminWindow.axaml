@@ -55,7 +55,7 @@
                                                         </StackPanel>
                                                 </Button>
                                         </StackPanel>
-                                        <ToggleButton Grid.Row="4" Classes="Theme" IsChecked="True" Padding="2" HorizontalAlignment="Left">
+                                        <ToggleButton Grid.Row="4" Classes="Theme" IsChecked="True" Padding="2">
                                                 <Panel>
                                                         <PathIcon Name="On" Data="{StaticResource WeatherMoonRegular}"></PathIcon>
                                                         <PathIcon Name="Off" Data="{StaticResource WeatherSunnyRegular}"></PathIcon>

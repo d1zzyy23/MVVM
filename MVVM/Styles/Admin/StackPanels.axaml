@@ -15,7 +15,11 @@
     </Style>
     
     <Style Selector="StackPanel.IconButton Label">
-        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
         <Setter Property="Padding" Value="0 0 0 0"></Setter>
+    </Style>
+    
+    <Style Selector="StackPanel.IconButton PathIcon">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
     </Style>
 </Styles>
